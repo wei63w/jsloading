@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>JSLoading</title>
+		<style type="text/css">
+			#loading{
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="loading">loading...</div>
+		
+		
+	</body>
+	
+	 <script>
+			  var script_arr = [
+			  	'./js/jquery2.1.1.js',
+				 './js/affix.js',
+				 './js/alert.js',
+				 './js/tooltip.js',
+				 './js/modal.js',
+				 './js/bootstrap.js',
+			  	'http://cdn.bootcss.com/jquery/3.1.0/jquery.slim.js',
+			  	'http://cdn.bootcss.com/jquery/3.0.0-rc1/jquery.js',
+			  	'http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.slim.min.js'
+			  	];
+			  var nums = script_arr.length;
+			  var start = 0;
+			  for(var i in script_arr){
+			   var script = document.createElement('script');
+			   script.src = script_arr[i];
+			   (function(j){
+			    document.body.appendChild(script);
+			    script.onload = function(){
+			     start++;
+			     var loadingNum = (start/nums)*100 + '%';
+			     console.log(loadingNum);
+			     if(start == nums){
+			      console.log('全部加载完成');
+			     }
+			     document.getElementById('loading').style.width = loadingNum;
+			    };
+			    script.onerror = function(){
+			     start++;
+			     console.log(srcript_arr[j] + '失败');
+			     document.getElementById('loading').style.width = (start/nums)*100 + '%';
+			    }
+			   })(i);
+			
+			  }
+			
+		 </script>
+</html>

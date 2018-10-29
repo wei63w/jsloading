@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<title>JSLoading</title>
+		
+		<style type="text/css">
+			.dvloader{
+				margin-left: 50%;
+				margin-top: 50%;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/customer.css"/>
+		
+		<script type="text/javascript" src="js/loader.js"></script>
+		<script src="js/jquery2.1.1.js"></script>
+		<script>
+			var app = { useSystemScroll: false };
+			window.addEventListener('touchmove', function(e){ !app.useSystemScroll && e.preventDefault(); }, false);
+			window.addEventListener('load', function(){
+				var myload = new loader('.asset');
+				var loadTxt = document.querySelector('.asset ._load var');
+				document.querySelector('body').style.fontSize=window.innerWidth/320*12+'px';
+				myload.onLoading=function(p){
+					loadTxt.innerText = Math.floor(p*100)+'%'
+					if(p<1){ return; }
+					//loading 加载文件完毕后 执行主函数
+					setTimeout(function(){ appBegin(); }, 1000);
+				}
+				setTimeout(function(){ myload.load(); }, 1000);
+			}, false);
+		</script>
+	</head>
+	
+	<body>
+		<!--资源loading-->
+		<div class="asset">
+			<div class="_list">
+				<img assetUrl="images/1.jpg" />
+				<img assetUrl="images/2.jpg" />
+				<img assetUrl="images/3.gif" />
+				<img assetUrl="images/4.jpg" />
+				<img assetUrl="images/5.jpg" />
+				<img assetUrl="images/6.jpg" />
+				<img assetUrl="images/7.jpg" />
+				<img assetUrl="images/8.jpg" />
+				<img assetUrl="images/9.jpg" />
+				<img assetUrl="images/10.jpg" />
+				<img assetUrl="images/11.jpg" />
+				<img assetUrl="images/12.jpg" />
+				<img assetUrl="images/13.jpg" />
+				<img assetUrl="images/14.jpg" />
+				<script assetUrl="js/jquery-transit.min.js"></script>
+				<script assetUrl="js/bootstrap.js"></script>
+				<script assetUrl="js/alert.js"></script>
+			</div>
+			<div class="_load">
+				<center>
+					<var>0%</var>
+				</center>
+				<script>
+					if(!navigator.userAgent.match(/micromessenger/i)){ document.querySelector('body').setAttribute('class', 'nowx'); }
+				</script>
+			</div>
+		</div>
+		<div class="wrapper">
+			this is my main page show
+		</div>
+		
+		
+		
+		
+		
+				
+		<script>
+			function appBegin(){
+				//隐藏loading,显示main主页
+				$(".asset").transit({opacity:0}, 300, 'linear', function(){ 
+					$(this).remove();
+					$(".s1").show(); 
+				});
+			}
+		</script>
+	</body>
+	
+	
+</html>

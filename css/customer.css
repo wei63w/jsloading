@@ -1,0 +1,686 @@
+/*----
+ * HTML5 Reset :: style.css
+ * 
+ * ---------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+	vertical-align: baseline;
+	background-color: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+ul, ol {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background-color: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table { font-size: inherit; font: 100%; border-collapse: separate; border-spacing: 0;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+
+
+* { padding:0; margin: 0; box-sizing: border-box; background-repeat: no-repeat; background-position: 0 0; background-size: 100% auto;}
+html, body { height: 100%; background: #1f2427; color: #fff; font-size: 12px; font-family: arial;  -webkit-user-select: none; -webkit-touch-callout: none;}
+section { position: absolute; top: 0; left: 0; width: 100%; min-height: 100%; overflow: hidden; display: none;}
+img { max-width: 100%;}
+.wrapper { position: relative; width: 100%; height: 100%;background-color: white;color: black;}
+
+
+
+
+/***** assetloading *****/
+.asset { position: absolute; z-index: 99; top: 0; bottom: 0; width: 100%;}
+.asset ._list { display: none; }
+/*.asset ._load { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; color: #aaa; background: #000 url(../images/load2.jpg) no-repeat 50% 50% / 100% auto;  }*/
+.asset ._load { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; color: #aaa; background: #272f32;}
+.mloading{
+	 background-size: 60% 60% !important;background-position: center center;
+}
+.asset ._load * { position: absolute; top: 50%; left: 50%; width: 100%;}
+.asset ._load center { padding-bottom: 100%; left: 0; margin-top: -52.5%;}
+/*.asset ._load sub { -webkit-animation: ani-load1 3s linear infinite both; width: 150%; padding-bottom: 150%; margin: -75% 0 0 -75%; background-image: url(../images/loadapple.gif);}*/
+.asset ._load sub {  width: 150%; padding-bottom: 150%; margin: -75% 0 0 -75%; background-image: url(../images/loadapple.gif);}
+.asset ._load sup { width: 28.125%; padding-bottom: 28.125%; margin: -14.0625% 0 0 -14.0625%; background-image: url(../images/load4.png); }
+.asset ._load em { width: 20%; padding-bottom: 20%; margin: -10% 0 0 -10%; overflow: hidden; border-radius: 100%; background-size: 100% 100%;}
+.asset ._load var { left: 0; text-align: center; font-size: 1.2em; color: #fff; margin-top: 18.5%;}
+@-webkit-keyframes ani-load1{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(360deg); }
+}
+
+
+
+.s1 .bgparent{
+	background-image: url(../images/s1-bg.gif);
+	    background-position: center center;
+    background-size: 40% 70%;;
+}
+.s1 header{
+	-webkit-animation: fadeIn-t 0.2s 0.2s ease-out both;
+    text-align: center;
+    line-height: 1.2em;
+    margin-top: 12%;
+}
+.s1 header h3{
+	color: gray;
+	font-size: 20px;
+}
+.s1 > *{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.s1 header h4 {
+    margin: 4% 0 3%;
+}
+.s1 header h4 i {
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    margin: 0 -0.05em;
+    vertical-align: top;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: #00ccff;
+    text-shadow: #237223 0 0 1px;
+    -webkit-text-stroke: #193c20 1px;
+}
+.s1 footer {
+    -webkit-animation: fadeIn-b 0.2s 0.3s ease-out both;
+    top: auto;
+    bottom: 0;
+    background: #1d2225;
+}
+.s1 footer i:nth-child(3n+1) {
+    border-left: none;
+}
+.s1 footer i {
+    float: left;
+    width: 33.3%;
+    border-top: solid #262b2d 1px;
+    border-left: solid #262b2d 1px;
+    font-size: 2em;
+    color: #666;
+    line-height: 2em;
+    height: 2.5em;
+    text-align: center;
+}
+.s1 center {
+    display: none;
+    top: auto;
+    bottom: 0;
+    padding: 4%;
+}
+
+.icondelete{
+	background-position-y: 0%;
+}
+[class^='icondelete'], [class*=' icondelete'] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(../images/ico.png);
+    vertical-align: middle;
+    margin-top: -0.2em;
+}
+
+.s2{
+	background-color: #ebebeb;
+}
+.s2 li {
+    display: none;
+    position: relative;
+    padding: 1.3em 4em;
+}
+.s2 li center span {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 0.3em;
+    text-align: left;
+    padding: 0.2em 1em;
+    line-height: 1.4em;
+    color: #fff;
+}
+
+.s2 li h2{
+    float: left;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    margin: -1.3em 0 0 -4em;
+}
+.me{
+	/*background-image: url(../images/me.png);*/
+}
+
+/*icon*/
+[class^='ico'], [class*=' ico'] { display: inline-block; width: 1em; height: 1em; background-image: url(../images/ico.png); vertical-align: middle; margin-top: -0.2em; }
+.ico1 { background-position-y: 0%;}
+.ico2 { background-position-y: 10%;}
+.ico3 { background-position-y: 20%;}
+.ico4 { background-position-y: 30%;}
+.ico5 { background-position-y: 40%;}
+.ico6 { background-position-y: 50%;}
+.ico7 { background-position-y: 60%;}
+.ico8 { background-position-y: 70%;}
+.ico9 { background-position-y: 80%;}
+.ico10 { background-position-y: 90%;}
+.ico11 { background-position-y: 100%;}
+
+/*user*/
+[class^='user'], [class*=' user'] { background-image: url(../images/userjingli.png); background-position-y: 9999%;}
+.userjingli { background-size: 100% 100%; background-image: url(../images/user1jingli.jpg);}
+.user0 { background-size: 100% 100%; background-image: url(../images/user1.jpg);}
+.user1 { background-position-y: 0%;}
+.user2 { background-position-y: 15%;}
+.user3 { background-position-y: 29%;}
+.user4 { background-position-y: 44%;}
+.user5 { background-position-y: 58%;}
+.user6 { background-position-y: 72%;}
+.user7 { background-position-y: 86%;}
+.user8 { background-position-y: 100%;}
+
+.s2 li.my { padding-top: 0.1em;}
+.s2 li.my h2 { float: right; margin: 0 -4em 0 0; }
+.s2 li.my h2:after { display: none;}
+.s2 li.my p { float: right; background: #a0e75a; border-color: #bbb;}
+.s2 li.my p:before { left: auto; right: 0; -webkit-transform: rotate(135deg); margin-right: -0.6em;  background: #a0e75a; border-color: #bbb;}
+.s2 li.my figure img { float: right;}
+.s2 li .my_name { padding-right: 1em;}
+
+/***** s2 *****/
+.s2 { background: #ebebeb; padding-bottom: 13%;}
+.s2 ul { padding: 1.5em 1em 4em; }
+.s2 li { display: none; position: relative; padding: 1.3em 4em; }
+.s2 li:after { content: ""; display: block; clear: both; height: 0;}
+.s2 li center { margin: -1.6em -3.5em 0;}
+.s2 li center span { display: inline-block; background: #ccc; border-radius: 0.3em; text-align: left; padding: 0.2em 1em; line-height: 1.4em; color: #fff;}
+.s2 li:nth-child(2) center span { padding: 0.5em 1em;}
+.s2 li:last-child center { margin-top: 0;}
+.s2input {
+    display: none;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    min-height: 0;
+    height: 0;
+    padding-bottom: 12.8125%;
+    border-top: solid #e3e3e3 1px;
+    background-color: #ebebeb;
+    background-image: url(../images/s2-input.png);
+}
+.s2 li p {
+	position: relative;
+	float: left;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	max-width: 95%;
+	color: #000;
+	background: #fff;
+	border: solid #bbb 1px;
+	border-radius: 0.3em;
+	padding: 0.45em 0.45em;
+}
+.s2 li p:before {
+	content: "";
+	position: absolute; 
+	top: 0;
+	left: 0;
+	font-size: 0.5em;
+	width: 1em;
+	height: 1em;
+	background: #fff;
+	border-top: solid #bbb 1px;
+	border-left: solid #bbb 1px;
+	-webkit-transform: rotate(-45deg);
+	margin: 1.6em 0 0 -0.6em;
+}
+.s2 li p i { font-size: 1.35em; }
+.s2 li figure img { display: block; }
+.s2 li figure a { position: relative; display: block; margin-left: -0.5em;}
+.s2 li figure a s { -webkit-animation: ani-hand 1.5s 1.2s infinite both; pointer-events: none; position: absolute; left: 0; top: 0; width: 18%; padding-bottom: 18%; background-image: url(../img/hand.png); margin: 10% 0 0 70%;}
+.s2 li h2 { float: left; position: relative; width: 3em; height: 3em; margin: -1.3em 0 0 -4em; }
+.s2 li h2:after { position: absolute; top: 0; left: 100%; margin-left: 32%; font-size: 0.9em; color: #666; line-height: 1.2em; white-space: nowrap;}
+
+.s2 li .userjingli:after { content: "精励联讯";}
+.s2 li .user1:after { content: "马涛 (精励联讯董事总经理)";}
+.s2 li .user2:after { content: "吕晓辉（精励联讯副总经理）";}
+.s2 li .user3:after { content: "秦莺（精励联讯产品总监）";}
+.s2 li .user4:after { content: "刘建军（精励联讯数据总监）";}
+.s2 li .user5:after { content: "陈巍（精励联讯产品经理）";}
+.s2 li .user6:after { content: "张明涛（精励联讯产品经理）";}
+.s2 li .user7:after { content: "郭兆波（精励联讯产品经理）";}
+
+@-webkit-keyframes ani-hand{
+    0%{ -webkit-transform: translateY(100%) scale(1); opacity: 0;}
+    30%, 40%{ -webkit-transform: translateY(0%) scale(1); opacity: 1;}
+    50%{ -webkit-transform: translateY(0%) scale(0.92); opacity: 1;}
+    60%, 70%{ -webkit-transform: translateY(0%) scale(1); opacity: 1;}
+    90%, 100%{ -webkit-transform: translateY(0%) scale(1); opacity: 0;}
+}
+/*手套点击动画*/
+.s2 li figure a s {
+    -webkit-animation: ani-hand 1.5s 1.2s infinite both;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18%;
+    padding-bottom: 18%;
+    background-image: url(../images/hand.png);
+    margin: 10% 0 0 70%;
+}
+
+
+
+/*s3*/
+
+.s3 li .user1:after { content: "马涛(精励联讯董事总经理)";}
+.s3 li .user2:after { content: "吕晓辉(精励联讯副总经理)";}
+.s3 li .user3:after { content: "秦莺(精励联讯产品总监)";}
+.s3 li .user4:after { content: "刘建军(精励联讯数据管理部总监)";}
+.s3 li .user5:after { content: "陈巍(精励联讯产品经理)";}
+.s3 li .user6:after { content: "张明涛(精励联讯产品经理)";}
+.s3 li .user7:after { content: "郭兆波(精励联讯产品经理)";}
+.s3 li .user8:after { content: "冯君(精友国际集团总裁)";}
+
+.s3 li h2:after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 25%;
+    font-size: 1em;
+    color: #596d93;
+    line-height: 1.2em;
+    white-space: nowrap;
+}
+.s3 li h2 {
+    float: left;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    margin-left: -3.75em;
+}
+.s3 li h2+* {
+    margin-top: 1.5em;
+}
+
+.s3 h1 i {
+    float: right;
+    position: relative;
+    width: 18%;
+    padding-bottom: 18%;
+    margin: -14% 3% 0 0;
+    border: solid rgba(220,220,220,0.5) 2px;
+}
+.s3 h1 i:after {
+    position: absolute;
+    top: 0;
+    right: 120%;
+    margin-top: 24%;
+    white-space: nowrap;
+    font-size: 1.3em;
+    text-shadow: rgba(0,0,0,0.3) 1px 1px 1px;
+}
+.s3 h1 {
+    padding-top: 53%;
+    background-image: url(../images/s3-head.jpg);
+}
+.s3 ul {
+    color: #000;
+    padding: 3em 0 50%;
+}
+.s3 li {
+    padding: 1.25em;
+    padding-left: 5em;
+    border-bottom: solid #f3f3f5 1px;
+}
+.s3 li h2 {
+    float: left;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    margin-left: -3.75em;
+}
+.s3 li p {
+    line-height: 1.3em;
+}
+.s3 li figure {
+    position: relative;
+    margin-top: 2%;
+    width: 100%;
+    padding-bottom: 67.37%;
+    ratio: 0.6402877697841727%;
+}
+.s3 li h6 {
+    text-align: right;
+    margin-top: 3%;
+}
+.s3 li h6 time {
+    float: left;
+    font-size: 0.75em;
+    color: #555;
+    margin-top: 0.2em;
+}
+.s3 li h6 i {
+    font-size: 1.5em;
+}
+.s3 li i {
+    font-size: 1.4em;
+    margin-top: -0.1em;
+}
+.s3 li footer {
+    display: none;
+    position: relative;
+    font-size: 0.85em;
+    background: #f3f3f5;
+    padding: 0.2em 0.75em;
+    margin-top: 0.4em;
+}
+.s3 li footer p, .s3 li footer h5 {
+    display: none;
+    line-height: 1.3em;
+    padding: 0.5em 0;
+}
+.s3 li footer h5+p {
+    padding-top: 0;
+}
+.s3 li footer em {
+    color: #596d93;
+}
+.s3 li i {
+    font-size: 1.4em;
+    margin-top: -0.1em;
+}
+.s3>center {
+    display: none;
+}
+.s3>center a {
+    display: block;
+    font-size: 1.35em;
+    line-height: 2.8em;
+    color: #000;
+    border-top: solid #aaa 1px;
+}
+.s3 li figure * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*朋友圈图片*/
+.s3 .dh0 span{
+	background-image: url(../images/fzicon.jpg);
+}
+.s3 .dh1 span{
+	background-image: url(../images/pyq-1.gif);
+}
+.s3 .dh2{
+	padding-bottom: 67.37%;
+}
+.s3 .dh2 span s:nth-child(1){
+	background-image: url(../images/pyq-2-1.jpg);
+}
+.s3 .dh2 span s:nth-child(2){
+	background-image: url(../images/pyq-2-2.jpg);
+}
+.s3 .dh2 span s:nth-child(3){
+	background-image: url(../images/pyq-2-3.jpg);
+}
+ .dh2.ani span s:nth-child(3){ -webkit-animation: dh2 6s linear 2s infinite normal ; }
+ .dh2.ani span s:nth-child(2){ -webkit-animation: dh2 6s linear 4s infinite normal ; }
+@-webkit-keyframes dh2{
+    0%, 40% { -webkit-transform: scale(1); opacity: 1;}
+    50%, 100% { -webkit-transform: scale(1.5); opacity: 0;} 
+}
+
+/*动画名称,动画执行时间, 动画的速度曲线, 动画开始之前的延迟,动画播放次数n|infinite  ,正常播放还是反向播放normal|alternate;*/
+/*.dh2.ani span:nth-child(1) { -webkit-animation: dh2-1 5s linear 0s 1 normal ; }
+.dh2.ani span:nth-child(2) {-webkit-animation: dh2-2 5s linear 5s 1 normal ; }
+.dh2.ani span:nth-child(3) {-webkit-animation: dh2-3 5s linear 10s 1 normal ; }*/
+/*@-webkit-keyframes dh2-1{
+    0%, 10% { -webkit-transform: left:0; width: 100px;height: 60px;z-index: 1; opacity: 1;}
+    10%, 100% { -webkit-transform:left:0%; width: 300px;height: 150px;z-index: 100; opacity: 1;} 
+}
+@-webkit-keyframes dh2-2{
+    0%, 10% { -webkit-transform: scale(1);z-index: 1; opacity: 1;}
+    10%, 100% { -webkit-transform:scale(4);z-index: 100; opacity: 1;} 
+}
+@-webkit-keyframes dh2-3{
+    0%, 10% { -webkit-transform: translateX(-50%);width: 100px;height: 60px;z-index: 1; opacity: 1;}
+    10%, 100% { -webkit-transform:translateX(-70%);width: 300px;height: 150px;z-index: 100; opacity: 1;} 
+}*/
+
+
+
+.s3 .dh3{
+	padding-bottom: 67.37%;
+	height: 75%;
+}
+.s3 .dh3 span{
+	
+	
+}
+
+.s3 .dh3 span s:nth-child(1){
+	background-image: url(../images/pyq3-1.jpg);
+}
+.s3 .dh3 span s:nth-child(2){
+	background-image: url(../images/pyq3-2.jpg);
+}
+.s3 .dh3 span s:nth-child(3){
+	background-image: url(../images/pyq3-3.jpg);
+}
+ .dh3.ani span s:nth-child(3){ -webkit-animation: fadeOut-l 6s linear 2s infinite both ; }
+ .dh3.ani span s:nth-child(2){ -webkit-animation: fadeOut-l 6s linear 4s infinite both ; }
+
+@-webkit-keyframes fadeOut-l{
+    0%, 40% { -webkit-transform:  translateX(0); opacity: 1;}
+    50%, 100% { -webkit-transform: translateX(-50%); opacity: 0;} 
+}
+
+
+
+.s3 .dh6 span{
+	background-image: url(../images/pyqcar.gif);
+}
+.s3 .dh4{
+	padding-bottom: 65.37%%;
+}
+.s3 .dh4 span{
+	background-image: url(../images/pyq4.jpg);
+	width: 50%;
+}
+.s3 .dh5{
+	padding-bottom: 65.37%;
+}
+.s3 .dh5 span{
+	background-image: url(../images/pyq5.jpg);
+	width: 50%;
+}
+.s3 .dh7{
+	padding-bottom: 65.37%;
+}
+.s3 .dh7 span{
+	background-image: url(../images/pyq7.jpg);
+    width: 50%;
+}
+
+
+
+/***** s4 *****/
+.s4 { position: fixed;}
+.s4 * { position: absolute; top: 0; left: 0; width: 100%;}
+.s4 figure { -webkit-animation: fadeIn 0.2s linear both; height: 100%; background-color: rgba(0,0,0,0.75);}
+.s4 figure p { -webkit-animation: fadeIn-b 0.2s 0.15s both; top: 50%; padding-bottom: 50%; margin: -25% 0 0 0; background-image: url(../images/s4-40.png); }
+
+
+
+
+/***** 动画效果 *****/
+.no_animation { -webkit-animation: none !important;}
+@-webkit-keyframes Zindex { 0%{ -webkit-transform: skewX(0); }}
+@-webkit-keyframes fadeIn{
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+@-webkit-keyframes fadeOut{
+	0%{ opacity: 1;}
+    100%{ opacity: 0;}
+}
+@-webkit-keyframes fadeIn-t{
+    0%{ -webkit-transform: translateY(-50%); opacity: 0;}
+    100%{ -webkit-transform: translateY(0); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-b{
+    0%{ -webkit-transform: translateY(50%); opacity: 0;}
+    100%{ -webkit-transform: translateY(0); opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn-l{
+    0%{ -webkit-transform: translateX(-50%); opacity: 0;}
+    100%{ -webkit-transform: translateX(0); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-r{
+    0%{ -webkit-transform: translateX(50%); opacity: 0;}
+    100%{ -webkit-transform: translateX(0); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-lt{
+    0%{ -webkit-transform: translate(-50%, -50%); opacity: 0;}
+    100%{ -webkit-transform: translate(0%, 0%); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-rt{
+    0%{ -webkit-transform: translate(50%, -50%); opacity: 0;}
+    100%{ -webkit-transform: translate(0%, 0%); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-lb{
+    0%{ -webkit-transform: translate(-50%, 50%); opacity: 0;}
+    100%{ -webkit-transform: translate(0%, 0%); opacity: 1;}
+}
+@-webkit-keyframes fadeIn-rb{
+    0%{ -webkit-transform: translate(50%, 50%); opacity: 0;}
+    100%{ -webkit-transform: translate(0%, 0%); opacity: 1;}
+}
+@-webkit-keyframes scaleIn1{
+    0%{ -webkit-transform: scale(4); opacity: 0;}
+    100%{ -webkit-transform: scale(1); opacity: 1;}
+}
+@-webkit-keyframes scaleIn1b{
+    0%{ -webkit-transform: scale(6); opacity: 0;}
+    100%{ -webkit-transform: scale(1); opacity: 1;}
+}
+@-webkit-keyframes scaleIn2{
+    0%{ -webkit-transform: scale(0.3); opacity: 0;}
+    70%{ -webkit-transform: scale(1.2); opacity: 1;}
+    100%{ -webkit-transform: scale(1); opacity: 1;}
+}
+@-webkit-keyframes scaleLoop1{
+    0%{ -webkit-transform: scale(1); }
+    50%{ -webkit-transform: scale(1.1); }
+    100%{ -webkit-transform: scale(1); }
+}
+@-webkit-keyframes scaleLoop2{
+    0%{ -webkit-transform: scale(1); }
+    50%{ -webkit-transform: scale(0.9); }
+    100%{ -webkit-transform: scale(1); }
+}
+@-webkit-keyframes roundLoop1{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes roundLoop2{
+    0%{ -webkit-transform: rotate(0deg); }
+    100%{ -webkit-transform: rotate(-360deg); }
+}
+@-webkit-keyframes flashLoop1{
+    0%{ opacity: 1; }
+    50%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+@-webkit-keyframes flashLoop1b{
+    0%{ opacity: 1; }
+    50%{ opacity: 0.5; }
+    100%{ opacity: 1; }
+}
+@-webkit-keyframes flashLoop2{
+    0%{ opacity: 0; }
+    50%{ opacity: 1; }
+    100%{ opacity: 0; }
+}
+@-webkit-keyframes flashLoop2b{
+    0%{ opacity: 0.5; }
+    50%{ opacity: 1; }
+    100%{ opacity: 0.5; }
+}
+@-webkit-keyframes lineIn1{
+    0%{ width: 0; }
+    100%{ width: 100%; }   
+}
+@-webkit-keyframes lineIn2{
+    0%{ height: 0; }
+    100%{ height: 100%; }   
+}
